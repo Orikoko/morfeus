@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -25,10 +25,8 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "typescript": "^5.3.3",
-    "@types/react": "^18.2.41",
-    "@types/node": "^20.11.19"
+    "@types/node": "^20.17.30",
+    "@types/react": "^18.3.20",
+    "typescript": "^5.8.3"
   }
 }
-
-
