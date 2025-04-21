@@ -1,10 +1,9 @@
-// /pages/api/morfeus-chat.ts — Best of the Best API Handler for Morfeus
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { config } from "dotenv";
 config();
 
-import { generate_gpt_reasoning } from "@/core/fx_reasoning_engine"; // Adjust to actual local logic if needed
+// ❗ IMPORTANT: Replace this import with the actual path you’re using
+import { generate_gpt_reasoning } from "../../core/fx_reasoning_engine";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
@@ -17,7 +16,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: "Invalid query format" });
     }
 
-    // Process with Morfeus engine
     const result = await generate_gpt_reasoning(query.trim().toUpperCase());
     return res.status(200).json(result);
 
